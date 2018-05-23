@@ -44,4 +44,6 @@ export const gameReducer = (state=initialState, action) => {
       guesses: [...state.guesses, guess]
     });
   }
+
+  return state;
 };
