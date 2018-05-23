@@ -18,7 +18,7 @@ export const gameReducer = (state=initialState, action) => {
   }
 
   if (action.type === MAKE_GUESS) {
-    guess = action.guess;
+    let guess = action.guess;
     guess = parseInt(guess, 10);
     if (isNaN(guess)) {
       return Object.assign({}, state, {feedback: 'Please enter a valid number' });
